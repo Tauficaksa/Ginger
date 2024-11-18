@@ -1,0 +1,8 @@
+*my*.todo
+
+
+*.iso
+*.o
+
+_isodir
+objs
