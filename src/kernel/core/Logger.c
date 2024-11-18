@@ -6,13 +6,16 @@
 void Log(const char* message)
 {
     char* videoMemory = VGA_TEXT;
-    int i = 0;
 
-    // Write each character to video memory
-    while (message[i] != '\0')
+
+    // videoMemory[0] = 'H';
+    // videoMemory[1] = 0x07;
+
+    int i = -1;
+    int j = 0;
+    while(message[j] != '\0')
     {
-        videoMemory[i * 2] = message[i];    // Character byte
-        videoMemory[i * 2 + 1] = 0x07;      // Attribute byte (light grey on black)
-        i++;
+        videoMemory[++i] = message[j++];
+        videoMemory[++i] = 0x07;
     }
 }
