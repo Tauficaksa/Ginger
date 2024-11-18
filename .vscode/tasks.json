@@ -16,7 +16,8 @@
             },
             "dependsOrder": "sequence",
             "dependsOn": [
-                "build"
+                "build",
+                "build_iso"
             ]
         },
         {
@@ -27,6 +28,20 @@
                 "kind": "build",
                 "isDefault": false
             },
+        },
+        {
+            "label": "build_iso",
+            "type": "shell",
+            "command": "grub-mkrescue",
+            "args": [
+                "-o",
+                "ginger.iso",
+                "_isodir"
+            ],  
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            }
         }
     ]
 }

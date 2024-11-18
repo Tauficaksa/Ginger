@@ -6,8 +6,19 @@
 3. nasm
 4. grub2
 5. mtools
-6. xorriso 
+6. xorriso
 
 ## Commands
 - Run the command make in the root dir of the project
 - then make run
+
+<br>
+<br>
+
+# How To Debug
+## Deps
+1. gdb
+
+## Commands
+just hit f5 in vscode <br>
+and wait a lot
