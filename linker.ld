@@ -2,7 +2,7 @@ ENTRY(kernel_main)
 
 SECTIONS
 {
-    . = 1M;     /* we are starting after 1M. why? idk */
+    . = 1M;     /* Start loading sections at 1 MB. idk why */
 
     .boot :
     {
@@ -12,5 +12,25 @@ SECTIONS
     .text :
     {
         *(.text)
+        *(.text.*)
+    }
+
+    .rodata :
+    {
+        *(.rodata)
+        *(.rodata.*)
+    }
+
+    .data :
+    {
+        *(.data)
+        *(.data.*)
+    }
+
+    .bss :
+    {
+        *(.bss)
+        *(.bss.*)
+        *(COMMON)
     }
 }
