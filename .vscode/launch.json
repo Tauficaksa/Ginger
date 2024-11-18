@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Debug Kernel",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "_isodir/boot/kernel.bin",  // Path to your kernel binary
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "miDebuggerServerAddress": "localhost:1234",  // GDB server address from QEMU
+        "miDebuggerPath": "gdb",  // Path to your GDB binary
+        "setupCommands": [
+          {
+            "description": "Enable pretty printing for GDB",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ],
+        "preLaunchTask": "qemu_server",
+        "externalConsole": false,
+      }
+    ]
+  }
+  

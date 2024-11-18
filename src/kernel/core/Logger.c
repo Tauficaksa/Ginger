@@ -7,15 +7,19 @@ void Log(const char* message)
 {
     char* videoMemory = VGA_TEXT;
 
-
     // videoMemory[0] = 'H';
     // videoMemory[1] = 0x07;
 
-    int i = -1;
+    const char* msg = "ISAE";
+
+    int i = 0;
     int j = 0;
-    while(message[j] != '\0')
+    while(msg[j] != '\0')
     {
-        videoMemory[++i] = message[j++];
-        videoMemory[++i] = 0x07;
+        videoMemory[i] = msg[j];
+        i++;
+        j++;
+        videoMemory[i] = 0x07;
+        i++;
     }
 }

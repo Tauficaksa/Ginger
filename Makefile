@@ -14,8 +14,8 @@ KERNEL_BIN := $(BOOT_DIR)/kernel.bin
 CC := gcc
 AS := nasm
 LD := ld
-CFLAGS := -ffreestanding -O2 -Wall -Wextra
-LDFLAGS := -T linker.ld -O2
+CFLAGS := -ffreestanding -O2 -Wall -Wextra -g
+LDFLAGS := -T linker.ld -O2 -g
 ASFLAGS := -felf64
 
 # File extensions

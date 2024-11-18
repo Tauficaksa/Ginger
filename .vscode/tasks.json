@@ -1,0 +1,32 @@
+{
+    "tasks": [
+        {
+            "label": "qemu_server",
+            "type": "shell",
+            "command": "qemu-system-x86_64",
+            "args": [
+                "-cdrom",
+                "${workspaceFolder}/ginger.iso",
+                "-s",
+                "-S"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "build"
+            ]
+        },
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "make",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+        }
+    ]
+}

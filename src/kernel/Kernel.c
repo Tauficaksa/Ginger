@@ -9,7 +9,8 @@ void kernel_main()
     // video_memory[2] = 'i';  // Character
     // video_memory[3] = 0x07; // Attribute (light grey on black)
     
-    Log("Hi");
+    const char* msg = "HI";
+    Log(msg);
 
     while(1) {}
 }
