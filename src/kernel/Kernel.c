@@ -1,5 +1,5 @@
 #include "core/Logger.h"
-
+#include "io/keyboard.h"
 
 void kernel_main()
 {
@@ -7,8 +7,9 @@ void kernel_main()
 
     ClearScreen();
 
-    SetLogColor(PRINT_COLOR_WHITE, PRINT_COLOR_BLACK);
-    Log(startMessage);
+    // SetLogColor(PRINT_COLOR_WHITE, PRINT_COLOR_BLACK);
+    // Log(startMessage);
+    keyboard_input();
 
     while(1) {}
 }
