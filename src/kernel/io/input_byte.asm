@@ -1,5 +1,5 @@
 section .text 
-global inb
+global input_byte
 
 input_byte:
     ; Arguments:

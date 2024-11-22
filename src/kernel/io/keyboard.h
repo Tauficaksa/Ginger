@@ -2,5 +2,5 @@
 #define KEYBOARD_h
 
 void keyboard_input();
-extern unsigned char inb(unsigned short port);
+extern unsigned char input_byte(unsigned short port);
 #endif
